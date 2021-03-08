@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+        <script src="common/js/jquery-3.5.1.min.js"></script>
+        <script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+        <script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+        <script>
+        	function func1(){
+        		console.log("fun1() 실행");
+        	}
+        	
+        	const func2 = function() {
+        		console.log("fun2() 실행");
+        	};
+        	
+        	const func3 = ()=>{
+        		console.log("func3() 실행");
+        	}
+        	
+        	function func4(arg1){
+        		console.log(arg1)
+        	}
+        	
+        	const func5 = function(arg1){
+        		console.log(arg1);
+        	}
+        	const func6 = (arg1) => {
+        		console.log(arg1)
+        	}
+        	
+        	const func7 = arg1=>{
+        		console.log(arg1)
+        	}
+        	const func8 = arg1=> console.log(arg1)
+        	
+        	function func9(x,y){
+        		return x+y;
+        	}
+        	
+        	const func10 = function(x,y){
+        		return x+y;
+        	}
+        	
+        	const func11 = (x,y) =>{
+        		return x+y;
+        	}
+        	
+        	const func12 = (x,y)=> x+y;
+        </script>
+	</head>
+	<body>
+		<div class="card">
+            <div class="card-header">
+                Javascript Where to
+            </div>
+            <div class="card-body">
+				<button onclick="func1()" class="btn btn-success btn-sm mr-2">func1()</button>
+				<button onclick="func2()" class="btn btn-success btn-sm mr-2">func2()</button>
+				<button onclick="func3()" class="btn btn-success btn-sm mr-2">func3()</button>
+				<hr/>
+				<button onclick="func4('hello')" class="btn btn-success btn-sm mr-2">func4()</button>
+				<button onclick="func5(3)" class="btn btn-success btn-sm mr-2">func5()</button>
+				<button onclick="func6(true)" class="btn btn-success btn-sm mr-2">func6()</button>
+				<button onclick="func4({a:3,b:5})" class="btn btn-success btn-sm mr-2">func7()</button>
+				<hr/>
+            </div>
+        </div>
+	</body>
+</html>

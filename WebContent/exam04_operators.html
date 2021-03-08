@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+        <script src="common/js/jquery-3.5.1.min.js"></script>
+        <script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+        <script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="card">
+            <div class="card-header">
+                Javascript Where to
+            </div>
+            <div class="card-body">
+				<script>
+            		let x = 2;
+            		let result = x ** 3;
+            		console.log(result);
+            		
+            		x **= 4;
+            		console.log(x);
+        		</script>
+        		<script>
+        			let y =3.5;
+        			console.log(typeof y);
+        			
+        			let y2 = "Javascript";
+        			console.log(typeof y2);
+        			
+        			let y3 = false;
+        			console.log(typeof y3);
+        			
+        			let y4 = {name:"javascript"};
+        			console.log(typeof y4);
+        			
+        			let y5 = function(){}
+        			console.log(typeof y5);
+        			
+        			let y6 = () => {};
+        			console.log(typeof y6);
+        		</script>
+        		<script>
+        			let y7 = 3;
+        			let y8 = 8;
+        			console.log(y7==y8);
+        			console.log(y7===y8);
+        		</script>
+        		<script>
+        			const var9 = ""|| "abc";
+        			console.log("var9: "+ var9);
+        			
+        			const var10 = null|| "abc";
+        			console.log("var10: "+ var10);
+        			
+        			var var11;
+        			var var12 = var11 || 5;
+        			console.log("var12: "+ var12);
+        			
+        			var var13;
+        			var var14 = var13 || 5;
+        			console.log("var14: "+ var14);
+        			
+        			var var15 = false;
+        			var var16 = var15 || 5;
+        			console.log("var16: "+ var16);
+        			
+        			var var17 = 3 || 5;
+        			console.log(var17)
+        			
+        			console.log(""&&"abc");
+        			console.log(null&&"abc");
+        			console.log(false&&"abc");
+        			console.log("a"&&"abc");
+        			console.log("abc"&&"a");
+        			console.log(true&&"abc");	//
+        		</script>
+            </div>
+        </div>
+	</body>
+</html>
