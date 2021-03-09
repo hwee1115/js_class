@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+        <script src="common/js/jquery-3.5.1.min.js"></script>
+        <script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+        <script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+        <script>
+        	console.log(this);	//window 객체 참조
+			const person = {
+				name:"홍길동",
+				age:25,
+				eat:function(){
+					console.log(this);	//함수 내부의 this는 자신을 호출한 객체를 참조
+				},
+				walk:()=>{
+					console.log(this);	//화살표 함수 내부의 this는 상위의 this를 찾아서 지정
+					this.age=30;
+				}
+			};
+			person.eat();
+			person.walk();
+			console.log(person.age);
+			console.log(age);
+		
+
+			const method =person.eat;
+			method();
+
+			//클래스 선언
+			var people = function(){
+				this.name = "홍길동";
+				this.age = 25;
+				this.walk = ()=>{
+					console.log(this);
+				}
+			};
+
+			//클래스로부터 객체 생성
+			var p1 = new people();
+			p1.walk();
+        </script>
+	</head>
+	<body>
+		<div class="card">
+            <div class="card-header">
+                Javascript Where to
+            </div>
+            <div class="card-body">
+				this
+            </div>
+        </div>
+	</body>
+</html>
