@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="../common/js/jquery-3.5.1.min.js"></script>
+<script src="../common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="../common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+   <script>
+        const changeImg1 = ()=>{
+         const img1 = window.document.getElementById("img1");
+            img1.src="../common/images/photo2.jpg"
+        };
+
+        const changeGroup1=() =>{
+           const img = document.getElementsByClassName("group1")
+           for(var i=0; i<img.length; i++){
+              img[i].src="../common/images/photo4.jpg"
+           }
+        }
+
+        const changeImg = ()=>{
+           var imgs = document.getElementsByTagName("img");
+           for(var i=0; i<imgs.length; i++){
+              imgs[i].src="../common/images/photo5.jpg"
+           }
+        }
+
+        const changeCssSelector=() =>{
+           const img = document.querySelectorAll("#div3 .group1")
+           for(var i=0; i<img.length; i++){
+              img[i].src="../common/images/photo6.jpg"
+           }
+        }
+   </script>
+</head>
+
+<body>
+   <div class="card">
+   <div class="card-header">
+      Global Function 사용하기
+   </div>
+   <div class="card-body">
+      <div>
+         <button onclick="changeImg1()" class="btn btn-primary btn-sm mb-2">그림변경</button><br/>
+         <img id="img1" src="../common/images/photo1.jpg" height="100">
+      </div>
+      <hr/>
+      <div>
+         <button onclick="changeGroup1()" class="btn btn-primary btn-sm mb-2">그림변경</button><br/>
+         <img class="group1" src="../common/images/photo1.jpg" height="100">
+         <img class="group1" src="../common/images/photo2.jpg" height="100">
+         <img class="group1" src="../common/images/photo3.jpg" height="100">
+      </div>
+      <hr/>
+      <button onclick="changeCssSelector()" class="btn btn-primary btn-sm mb-2">모든 그림 변경</button><br/>
+      <hr/>
+      <div id="div3"> 
+      <button onclick="changeCssSelector()" class="btn btn-primary btn-sm mb-2">모든 그림 변경</button><br/>
+         <img class="group1" src="../common/images/photo1.jpg" height="100">
+         <img class="group1" src="../common/images/photo2.jpg" height="100">
+         <img class="group1" src="../common/images/photo3.jpg" height="100">
+      </div>
+   </div>
+</div>
+</body>
+</html>
